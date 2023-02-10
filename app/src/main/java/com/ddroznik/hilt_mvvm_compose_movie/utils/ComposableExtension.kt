@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
-import com.ddroznik.movies_test.utils.network.DataState
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.DataState
 
 fun <T : Any> LazyGridScope.items(
     lazyPagingItems: LazyPagingItems<T>,

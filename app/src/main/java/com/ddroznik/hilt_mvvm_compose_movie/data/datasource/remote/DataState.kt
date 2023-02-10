@@ -1,4 +1,4 @@
-package com.ddroznik.movies_test.utils.network
+package com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote
 
 /**
  * Data state for processing api response Loading, Success and Error

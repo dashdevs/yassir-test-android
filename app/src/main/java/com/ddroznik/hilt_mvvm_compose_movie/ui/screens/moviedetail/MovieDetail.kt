@@ -32,7 +32,7 @@ import com.ddroznik.hilt_mvvm_compose_movie.utils.pagingLoadingState
 import com.ddroznik.movies_test.ui.theme.DefaultBackgroundColor
 import com.ddroznik.movies_test.ui.theme.FontColor
 import com.ddroznik.movies_test.ui.theme.SecondaryFontColor
-import com.ddroznik.movies_test.utils.network.DataState
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.DataState
 
 @Composable
 fun MovieDetail(navController: NavController, movieId: Int) {
@@ -41,7 +41,7 @@ fun MovieDetail(navController: NavController, movieId: Int) {
     val movieDetail = movieDetailViewModel.movieDetail
 
     LaunchedEffect(true) {
-        movieDetailViewModel.movieDetailApi(movieId)
+        movieDetailViewModel.getMovieDetails(movieId)
     }
 
     Column(
