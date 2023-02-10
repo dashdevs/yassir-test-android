@@ -7,6 +7,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repo: MovieRepository) : ViewModel() {
-
+//could fetch data here
 
 }

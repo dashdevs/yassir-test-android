@@ -5,9 +5,7 @@ import com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail.MovieDetail
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-
 interface ApiService {
-
     @GET(ApiURL.POPULAR_MOVIE_LIST)
     suspend fun popularMovieList(@Query("page") page: Int): BaseModel
 
