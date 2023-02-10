@@ -1,7 +1,7 @@
 package com.ddroznik.hilt_mvvm_compose_movie.di
 
-import com.ddroznik.movies_test.data.datasource.remote.ApiService
-import com.ddroznik.movies_test.data.datasource.remote.ApiURL
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiService
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,11 +22,13 @@ object NetworkModule {
     fun provideBaseURL(): String {
         return ApiURL.BASE_URL
     }
+
     @Singleton
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     }
+
     @Singleton
     @Provides
     fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
@@ -40,11 +42,13 @@ object NetworkModule {
         okHttpClient.build()
         return okHttpClient.build()
     }
+
     @Singleton
     @Provides
     fun provideConverterFactory(): Converter.Factory {
         return GsonConverterFactory.create()
     }
+
     @Singleton
     @Provides
     fun provideRetrofitClient(
@@ -58,6 +62,7 @@ object NetworkModule {
             .addConverterFactory(converterFactory)
             .build()
     }
+
     @Singleton
     @Provides
     fun provideRestApiService(retrofit: Retrofit): ApiService {

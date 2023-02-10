@@ -1,4 +1,4 @@
-package com.ddroznik.movies_test.ui.component.appbar
+package com.ddroznik.hilt_mvvm_compose_movie.ui.component.appbar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

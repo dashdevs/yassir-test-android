@@ -1,7 +1,7 @@
 package com.ddroznik.hilt_mvvm_compose_movie.di
 
-import com.ddroznik.movies_test.data.datasource.remote.ApiService
-import com.ddroznik.movies_test.data.repository.MovieRepository
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiService
+import com.ddroznik.hilt_mvvm_compose_movie.data.repository.MovieRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

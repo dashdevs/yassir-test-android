@@ -2,7 +2,7 @@ package com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.ddroznik.movies_test.data.datasource.remote.ApiService
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiService
 import com.ddroznik.hilt_mvvm_compose_movie.data.model.MovieItem
 import retrofit2.HttpException
 import timber.log.Timber
@@ -23,7 +23,7 @@ class PopularPagingDataSource @Inject constructor(private val apiService: ApiSer
             LoadResult.Page(
                 data = movieList.results,
                 prevKey = if (nextPage == 1) null else nextPage - 1,
-                nextKey =  if (movieList.results.isNotEmpty()) movieList.page + 1 else  null
+                nextKey = if (movieList.results.isNotEmpty()) movieList.page + 1 else null
             )
         } catch (exception: IOException) {
             Timber.e("exception ${exception.message}")
