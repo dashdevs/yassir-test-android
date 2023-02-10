@@ -22,13 +22,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.ddroznik.hilt_mvvm_compose_movie.R
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail.MovieDetail
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.CircularIndeterminateProgressBar
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.text.SubtitlePrimary
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.text.SubtitleSecondary
 import com.ddroznik.hilt_mvvm_compose_movie.utils.hourMinutes
 import com.ddroznik.hilt_mvvm_compose_movie.utils.pagingLoadingState
-import com.ddroznik.movies_test.data.datasource.remote.ApiURL
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
 import com.ddroznik.movies_test.ui.theme.DefaultBackgroundColor
 import com.ddroznik.movies_test.ui.theme.FontColor
 import com.ddroznik.movies_test.ui.theme.SecondaryFontColor
@@ -39,12 +39,9 @@ fun MovieDetail(navController: NavController, movieId: Int) {
     val movieDetailViewModel = hiltViewModel<MovieDetailViewModel>()
     val progressBar = remember { mutableStateOf(false) }
     val movieDetail = movieDetailViewModel.movieDetail
-    val recommendedMovie = movieDetailViewModel.recommendedMovie
 
     LaunchedEffect(true) {
         movieDetailViewModel.movieDetailApi(movieId)
-        movieDetailViewModel.recommendedMovieApi(movieId, 1)
-        movieDetailViewModel.movieCredit(movieId)
     }
 
     Column(
@@ -64,8 +61,7 @@ fun MovieDetail(navController: NavController, movieId: Int) {
                         contentScale = ContentScale.FillBounds,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(300.dp)
-                        //.clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
+                            .height(450.dp)
                     )
                     Column(
                         modifier = Modifier
@@ -135,9 +131,6 @@ fun MovieDetail(navController: NavController, movieId: Int) {
                     }
                 }
             }
-        }
-        recommendedMovie.pagingLoadingState {
-            progressBar.value = it
         }
         movieDetail.pagingLoadingState {
             progressBar.value = it

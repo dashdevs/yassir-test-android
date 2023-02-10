@@ -23,11 +23,9 @@ fun <T : Any> LazyPagingItems<T>.pagingLoadingState(
 ) {
     this.apply {
         when {
-            // data is loading for first time
             loadState.refresh is LoadState.Loading -> {
                 isLoaded(true)
             }
-            // data is loading for second time or pagination
             loadState.append is LoadState.Loading -> {
                 isLoaded(true)
             }

@@ -72,26 +72,9 @@ fun networkCallback(callback: (ConnectionState) -> Unit): ConnectivityManager.Ne
 fun connectivityState(): State<ConnectionState> {
     val context = LocalContext.current
 
-    // Creates a State<ConnectionState> with current connectivity state as initial value
     return produceState(initialValue = context.currentConnectivityState) {
-        // In a coroutine, can make suspend calls
         context.observeConnectivityAsFlow().collect {
             value = it
         }
     }
 }
-
-/*
-@Composable
-fun ConnectivityStatus() {
-    // This will cause re-composition on every network state change
-    val connection by connectivityState()
-
-    val isConnected = connection === ConnectionState.Available
-
-    if (isConnected) {
-        // Show UI when connectivity is available
-    } else {
-        // Show UI for No Internet Connectivity
-    }
-}*/

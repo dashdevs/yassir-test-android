@@ -12,9 +12,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.navArgument
 import com.ddroznik.hilt_mvvm_compose_movie.R
-import com.ddroznik.hilt_mvvm_compose_movie.ui.screens.genre.GenreScreen
 import com.ddroznik.hilt_mvvm_compose_movie.ui.screens.moviedetail.MovieDetail
-import com.ddroznik.movies_test.ui.screens.bottomnavigation.nowplaying.NowPlaying
+import com.ddroznik.hilt_mvvm_compose_movie.ui.screens.popularmovies.NowPlaying
 
 
 @Composable
@@ -26,19 +25,6 @@ fun Navigation(
             NowPlaying(
                 navController = navController,
             )
-        }
-        composable(
-            Screen.NavigationDrawer.route.plus(Screen.NavigationDrawer.objectPath),
-            arguments = listOf(navArgument(Screen.NavigationDrawer.objectName) {
-                type = NavType.StringType
-            })
-        ) { backStack ->
-            val genreId = backStack.arguments?.getString(Screen.NavigationDrawer.objectName)
-            genreId?.let {
-                GenreScreen(
-                    navController = navController, genreId
-                )
-            }
         }
         composable(
             Screen.MovieDetail.route.plus(Screen.MovieDetail.objectPath),

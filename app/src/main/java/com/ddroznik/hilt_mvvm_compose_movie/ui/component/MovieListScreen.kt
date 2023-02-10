@@ -22,18 +22,18 @@ import androidx.paging.PagingData
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil.compose.rememberAsyncImagePainter
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.MovieItem
 import com.ddroznik.hilt_mvvm_compose_movie.navigation.Screen
 import com.ddroznik.hilt_mvvm_compose_movie.navigation.currentRoute
 import com.ddroznik.hilt_mvvm_compose_movie.utils.items
 import com.ddroznik.hilt_mvvm_compose_movie.utils.pagingLoadingState
-import com.ddroznik.movies_test.data.datasource.remote.ApiURL
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.MovieItem
 import com.ddroznik.movies_test.ui.theme.DefaultBackgroundColor
 import com.ddroznik.movies_test.ui.theme.cornerRadius10
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-fun HomeScreen(
+fun MovieListScreen(
     navController: NavController, movies: Flow<PagingData<MovieItem>>
 ) {
     val activity = (LocalContext.current as? Activity)
@@ -42,7 +42,6 @@ fun HomeScreen(
     val moviesItems: LazyPagingItems<MovieItem> = movies.collectAsLazyPagingItems()
 
     BackHandler(enabled = (currentRoute(navController) == Screen.Home.route)) {
-        // execute your custom logic here
         openDialog.value = true
     }
     Column(modifier = Modifier.background(DefaultBackgroundColor)) {

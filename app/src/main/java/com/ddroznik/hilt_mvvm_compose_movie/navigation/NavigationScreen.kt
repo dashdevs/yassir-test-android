@@ -19,8 +19,6 @@ sealed class Screen(
     val objectPath: String = ""
 ) {
     object Home : Screen("home_screen")
-    object NavigationDrawer :
-        Screen("navigation_drawer", objectName = "genreId", objectPath = "/{genreId}")
 
     object MovieDetail :
         Screen("movie_detail_screen", objectName = "movieItem", objectPath = "/{movieItem}")

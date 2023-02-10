@@ -11,7 +11,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 fun CircularIndeterminateProgressBar(isDisplayed: Boolean, verticalBias: Float) {
     if (isDisplayed) {
         ConstraintLayout(
-            modifier = Modifier.fillMaxSize()//.background(Color.Black.copy(alpha = 0.5f)),
+            modifier = Modifier.fillMaxSize()
         ) {
             val (progressBar) = createRefs()
             val topBias = createGuidelineFromTop(verticalBias)

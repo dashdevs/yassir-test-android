@@ -1,13 +1,13 @@
-package com.ddroznik.movies_test.ui.component.appbar
+package com.ddroznik.hilt_mvvm_compose_movie.ui.component.appbar
 
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import com.ddroznik.movies_test.ui.theme.Purple500
 
 @Composable
-fun HomeAppBar(title: String, openDrawer: () -> Unit, openFilters: () -> Unit) {
+fun HomeAppBar(title: String) {
     TopAppBar(
         backgroundColor = Purple500,
         title = {
@@ -15,18 +15,6 @@ fun HomeAppBar(title: String, openDrawer: () -> Unit, openFilters: () -> Unit) {
                 text = title,
                 style = MaterialTheme.typography.h6,
             )
-        },
-        navigationIcon = {
-            IconButton(onClick = {
-                openDrawer()
-            }) {
-                Icon(Icons.Default.Menu, "Menu")
-            }
-        },
-        /*actions = {
-            IconButton(onClick = openFilters) {
-                Icon(imageVector = Icons.Filled.Search, contentDescription = "Search")
-            }
-        }*/
+        }
     )
 }

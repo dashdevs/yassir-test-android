@@ -18,14 +18,16 @@ import com.ddroznik.hilt_mvvm_compose_movie.navigation.currentRoute
 
 
 @Composable
-fun ExitAlertDialog(navController: NavController, cancel: (isOpen: Boolean) -> Unit,  ok: () -> Unit) {
+fun ExitAlertDialog(
+    navController: NavController,
+    cancel: (isOpen: Boolean) -> Unit,
+    ok: () -> Unit
+) {
     val openDialog = remember { mutableStateOf(true) }
     if (currentRoute(navController = navController) == Screen.Home.route && openDialog.value) {
         AlertDialog(
             onDismissRequest = {
             },
-            // below line is use to display title of our dialog
-            // box and we are setting text color to white.
             title = {
                 Text(
                     text = stringResource(R.string.close_the_app),

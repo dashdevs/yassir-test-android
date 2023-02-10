@@ -1,4 +1,4 @@
-package com.ddroznik.hilt_mvvm_compose_movie.data.model.moviedetail
+package com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail
 
 data class BelongsToCollection(
     val backdrop_path: String,
