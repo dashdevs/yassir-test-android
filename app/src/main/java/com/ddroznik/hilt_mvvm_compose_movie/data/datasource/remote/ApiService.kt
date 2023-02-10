@@ -1,7 +1,7 @@
 package com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote
 
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.BaseModel
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.BaseModel
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail.MovieDetail
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

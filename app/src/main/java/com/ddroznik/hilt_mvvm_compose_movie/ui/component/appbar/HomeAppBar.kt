@@ -1,8 +1,8 @@
 package com.ddroznik.hilt_mvvm_compose_movie.ui.component.appbar
 
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import com.ddroznik.movies_test.ui.theme.Purple500
 

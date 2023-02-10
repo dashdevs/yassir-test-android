@@ -4,7 +4,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail.MovieDetail
 import com.ddroznik.hilt_mvvm_compose_movie.data.repository.MovieRepository
 import com.ddroznik.movies_test.utils.network.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel

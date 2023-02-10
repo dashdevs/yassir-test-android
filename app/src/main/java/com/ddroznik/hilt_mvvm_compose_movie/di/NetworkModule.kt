@@ -22,7 +22,6 @@ object NetworkModule {
     fun provideBaseURL(): String {
         return ApiURL.BASE_URL
     }
-
     @Singleton
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {

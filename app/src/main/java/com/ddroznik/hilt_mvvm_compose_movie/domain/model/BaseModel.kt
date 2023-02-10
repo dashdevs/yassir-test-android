@@ -1,4 +1,4 @@
-package com.ddroznik.hilt_mvvm_compose_movie.data.model
+package com.ddroznik.hilt_mvvm_compose_movie.domain.model
 
 
 import com.google.gson.annotations.SerializedName

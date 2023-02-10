@@ -22,12 +22,12 @@ import androidx.paging.PagingData
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import coil.compose.rememberAsyncImagePainter
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.MovieItem
 import com.ddroznik.hilt_mvvm_compose_movie.navigation.Screen
 import com.ddroznik.hilt_mvvm_compose_movie.navigation.currentRoute
 import com.ddroznik.hilt_mvvm_compose_movie.utils.items
 import com.ddroznik.hilt_mvvm_compose_movie.utils.pagingLoadingState
-import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.MovieItem
 import com.ddroznik.movies_test.ui.theme.DefaultBackgroundColor
 import com.ddroznik.movies_test.ui.theme.cornerRadius10
 import kotlinx.coroutines.flow.Flow

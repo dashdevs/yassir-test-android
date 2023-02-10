@@ -22,13 +22,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.ddroznik.hilt_mvvm_compose_movie.R
+import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.moviedetail.MovieDetail
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.CircularIndeterminateProgressBar
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.text.SubtitlePrimary
 import com.ddroznik.hilt_mvvm_compose_movie.ui.component.text.SubtitleSecondary
 import com.ddroznik.hilt_mvvm_compose_movie.utils.hourMinutes
 import com.ddroznik.hilt_mvvm_compose_movie.utils.pagingLoadingState
-import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiURL
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.moviedetail.MovieDetail
 import com.ddroznik.movies_test.ui.theme.DefaultBackgroundColor
 import com.ddroznik.movies_test.ui.theme.FontColor
 import com.ddroznik.movies_test.ui.theme.SecondaryFontColor

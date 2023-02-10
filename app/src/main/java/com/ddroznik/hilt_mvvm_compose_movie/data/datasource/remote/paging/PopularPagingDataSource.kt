@@ -3,7 +3,7 @@ package com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.ddroznik.hilt_mvvm_compose_movie.data.datasource.remote.ApiService
-import com.ddroznik.hilt_mvvm_compose_movie.data.model.MovieItem
+import com.ddroznik.hilt_mvvm_compose_movie.domain.model.MovieItem
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException
