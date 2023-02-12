@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="app_title">Popular Movies</string>
+    <string name="title">Title</string>
+    <string name="home">Home</string>
+    <string name="popular">Popular</string>
+    <string name="description">Description</string>
+    <string name="release_date">Release Date</string>
+    <string name="rating">Rating</string>
+    <string name="language">Language</string>
+    <string name="duration">Duration</string>
+    <string name="movie_detail">Movie detail</string>
+    <string name="yes">Yes</string>
+    <string name="do_you_want_to_exit_the_app">Do you want to exit the app?</string>
+    <string name="close_the_app">Close the app</string>
+    <string name="no">No</string>
+    <string name="there_is_no_internet">There is no internet!</string>
+</resources>
